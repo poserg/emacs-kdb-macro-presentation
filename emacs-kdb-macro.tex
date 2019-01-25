@@ -4,7 +4,7 @@
 \usepackage[english,russian]{babel}
 \usepackage{graphicx}
 \usepackage{beamerthemesplit}
-\usetheme{Berkeley}
+\usetheme{Darmstadt}
 \usecolortheme{dolphin}
 \setbeamertemplate{footline}[text line]{}
 
@@ -14,7 +14,18 @@
 \begin{document}
 % \maketitle
 \begin{frame}
+  \frametitle{Клавиатурные макросы. Часть 2}
   \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Введение}
+  \begin{block}{Почему Emacs?}
+  \begin{itemize}
+    \item<2-> редактор состоит из набора макросов (функции Lisp)
+    \item<3-> функции можно привязать к любым клавиатурным сочетаниям
+  \end{itemize}
+  \end{block}
 \end{frame}
 
 % * Введение в клавиатурные макросы в Emacs
@@ -31,13 +42,29 @@
 % * Пример создания множества файлов из одного файла.
 
 \begin{frame}
-  \frametitle{Введение}
-  \begin{itemize}
-  \item Почему Emacs?
-  \item Lisp-машина
-  \end{itemize}
+  \frametitle{Создание и выполнение макроса}
+  \begin{block}<2->{Простые команды для работы с клавиатурными макросами}
+    \begin{itemize}
+    \item C-x ( - начать запись макроса
+    \item C-x ) - закончить запись макроса
+    \item C-x e - запустить записанный макрос
+    \end{itemize}
+  \end{block}
+  \begin{block}<3->{Сложные команды}
+    \begin{itemize}
+    \item C-x C-k <RET> - отредактировать последний макрос
+    \item C-x C-k l - отобразить последние 300 команд
+    \item C-u 0 C-x e - запустить макрос бесконечно
+    \item C-x C-k r - запустить макрос на выделенном регионе
+    \item C-x C-k n - дать имя макросу
+    \item M-x insert-kdb-macro - получить Lisp-код макроса
+    \end{itemize}
+  \end{block}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Примеры}
+\end{frame}
 
 \begin{frame}
   Спасибо за внимание!
